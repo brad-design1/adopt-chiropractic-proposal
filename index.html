@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Chiropractic × AGE — Statement of Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --accent: #0ea5e9;
+            --dark: #1a1a2e;
+            --darker: #0f0f1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --border: #2a2a3e;
+            --warning: #f59e0b;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--light);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-number {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #b8b8c8;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: var(--light);
+        }
+
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 60vh;
+            padding-top: 8rem;
+        }
+
+        #hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            background: linear-gradient(135deg, var(--light) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        #hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(14, 165, 233, 0.15) 100%);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box .big-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--light);
+        }
+
+        .quote-block {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote-block p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--light);
+            margin-bottom: 0;
+        }
+
+        .workflow {
+            margin: 3rem 0;
+        }
+
+        .workflow-step {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: border-color 0.3s;
+        }
+
+        .workflow-step:hover {
+            border-color: var(--primary);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+
+        .step-content .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            font-weight: 500;
+        }
+
+        .tag.leak {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        .tag.cost {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+
+        .tag.opportunity {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .agent-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .agent-card {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .agent-card .agent-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .agent-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .agent-card .agent-role {
+            font-size: 0.85rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .agent-card ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .agent-card li {
+            font-size: 0.8rem;
+            background: rgba(5, 150, 105, 0.15);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            color: var(--light);
+        }
+
+        .human-oversight {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--warning);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .human-oversight strong {
+            color: var(--warning);
+        }
+
+        .timeline {
+            margin: 3rem 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid var(--border);
+        }
+
+        .timeline-item:last-child {
+            border-left: 2px solid var(--success);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid var(--darker);
+        }
+
+        .timeline-item:last-child::before {
+            background: var(--success);
+        }
+
+        .timeline-period {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-outcome {
+            font-size: 0.9rem;
+            color: var(--success);
+            margin-top: 1rem;
+            padding: 0.8rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 8px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .pricing-card.savings {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--success);
+        }
+
+        .pricing-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .pricing-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .pricing-amount {
+            text-align: right;
+        }
+
+        .pricing-amount .amount {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+        }
+
+        .pricing-amount .amount.green {
+            color: var(--success);
+        }
+
+        .pricing-amount .period {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .roi-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .roi-table th, .roi-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .roi-table th {
+            color: var(--gray);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .roi-table td {
+            color: var(--light);
+        }
+
+        .roi-table .total td {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--success);
+            border-top: 2px solid var(--success);
+        }
+
+        .guarantee-box {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(14, 165, 233, 0.15) 100%);
+            border: 2px solid var(--primary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .guarantee-box h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .checklist {
+            margin: 2rem 0;
+        }
+
+        .checklist-item {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .checklist-icon {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checklist-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .checklist-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .commitment {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .commitment-check {
+            font-size: 1.5rem;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        .commitment h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .commitment p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .not-included {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .not-included h4 {
+            color: #ef4444;
+            margin-bottom: 1rem;
+        }
+
+        .not-included ul {
+            list-style: none;
+        }
+
+        .not-included li {
+            padding: 0.5rem 0;
+            color: #b8b8c8;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .not-included li::before {
+            content: '✕';
+            color: #ef4444;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem 3rem;
+            }
+
+            .workflow-step {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .pricing-amount {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#situation">The Situation</a></li>
+            <li><a href="#problems">The Problems</a></li>
+            <li><a href="#solution">The Solution</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#investment">Investment</a></li>
+            <li><a href="#needs">What We Need</a></li>
+            <li><a href="#terms">Terms</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <p class="section-number">ADOPT CHIROPRACTIC × AGE</p>
+        <h1>Statement of Work</h1>
+        <p class="subtitle">Stop the pipeline leak. Cut costs. Grow smarter.</p>
+    </section>
+
+    <section id="situation">
+        <p class="section-number">01 — THE SITUATION</p>
+        <h2>You're paying $1,500/month for ad management that isn't working.</h2>
+        
+        <p class="lead">Your GHL pipeline is full of leads that went cold. Patients who booked once and never came back. Follow-ups that didn't happen. Meanwhile, you're paying a company $1,500/month to "manage" your Meta ads.</p>
+        
+        <p>ChiroHD has your patient records. GHL has your leads. They're not talking to each other. You're manually entering data, missing follow-ups, and watching potential revenue walk out the door.</p>
+
+        <p>You don't need to work harder. You need systems that work while you're adjusting patients.</p>
+
+        <div class="highlight-box">
+            <p class="big-number">$2,000+</p>
+            <p>Monthly savings when we eliminate the ad management fee and consolidate your software stack</p>
+        </div>
+
+        <div class="quote-block">
+            <p>"What if the AI agents could do the follow-ups, book the appointments, run the ads — and I just approved the messaging?"</p>
+        </div>
+    </section>
+
+    <section id="problems">
+        <p class="section-number">02 — THE PROBLEMS WE'RE SOLVING</p>
+        <h2>Your pipeline has holes. Let's plug them.</h2>
+
+        <div class="workflow">
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Leads Going Cold <span class="tag leak">revenue leak</span></h4>
+                    <p>GHL is full of leads that never got a second touch. Hot leads become warm, warm becomes cold, cold becomes forgotten. Every untouched lead is money left on the table.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Manual Follow-Up <span class="tag leak">revenue leak</span></h4>
+                    <p>Someone has to remember to text back, send the reminder, make the call. If it's you, it doesn't happen consistently. If it's staff, it depends on who's working that day.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Dormant Patients <span class="tag opportunity">opportunity</span></h4>
+                    <p>Patients who came for 6 visits and disappeared. They're not gone — they're just not being reminded. A simple "We miss you" campaign could bring them back.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Overpaying for Ad Management <span class="tag cost">$1,500/mo</span></h4>
+                    <p>You're paying a company to manage your Meta ads. Are they A/B testing? Generating new creative? Optimizing spend? Or just... running what's running?</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>ChiroHD ↔ GHL Disconnect <span class="tag leak">inefficiency</span></h4>
+                    <p>Your EHR and your CRM don't talk. Appointment data lives in one place, lead data in another. Manual sync means manual errors and missed connections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution">
+        <p class="section-number">03 — YOUR AI TEAM</p>
+        <h2>7 agents working 24/7 while you treat patients.</h2>
+        
+        <p>This isn't software you have to learn. It's a team that handles the work you can't get to — follow-ups, scheduling, reactivation, and ad optimization. All with human oversight on the things that matter.</p>
+
+        <div class="agent-grid">
+            <div class="agent-card">
+                <div class="agent-number">01</div>
+                <h4>PipelineNinja</h4>
+                <p class="agent-role">Lead Scoring + Data Hygiene</p>
+                <p>Auto-tags every lead in GHL: 🔥 Hot (contact within 24h), 💰 Warm (48-72h), ❄️ Cold (nurture). Deduplicates contacts, cleans up old data, keeps your pipeline accurate.</p>
+                <ul>
+                    <li>Lead scoring</li>
+                    <li>Auto-tagging</li>
+                    <li>Deduplication</li>
+                    <li>Data cleanup</li>
+                </ul>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-number">02</div>
+                <h4>FollowUpBot</h4>
+                <p class="agent-role">SMS/Email Nurture Sequences</p>
+                <p>Three temperature-based nurture tracks running 24/7. Hot leads get contacted within 5 minutes. Warm leads get daily touches. Cold leads get weekly check-ins. No lead sits untouched.</p>
+                <ul>
+                    <li>5-minute response</li>
+                    <li>SMS sequences</li>
+                    <li>Email nurture</li>
+                    <li>Temperature-based timing</li>
+                </ul>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-number">03</div>
+                <h4>AppointmentCloser</h4>
+                <p class="agent-role">Scheduling Automation</p>
+                <p>2-way calendar sync between GHL and ChiroHD. Automated booking, rescheduling, and reminder sequences. Reduces no-shows and eliminates scheduling friction.</p>
+                <ul>
+                    <li>Calendar sync</li>
+                    <li>Auto-booking</li>
+                    <li>Reminders</li>
+                    <li>Rescheduling</li>
+                </ul>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-number">04</div>
+                <h4>WinBack</h4>
+                <p class="agent-role">Reactivation Campaigns</p>
+                <p>Monthly "We miss you" sequences to dormant patients. Personalized based on their last visit, treatment type, and time since last contact. Pure found money from patients who already trust you.</p>
+                <ul>
+                    <li>Dormant detection</li>
+                    <li>Personalized outreach</li>
+                    <li>Re-engagement</li>
+                    <li>Campaign automation</li>
+                </ul>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-number">05</div>
+                <h4>GHLSync</h4>
+                <p class="agent-role">ChiroHD ↔ GHL Integration</p>
+                <p>Native connector enabled and configured. Patient demographics, appointments, and referral sources flow automatically between ChiroHD and GHL. No more manual data entry.</p>
+                <ul>
+                    <li>Native integration</li>
+                    <li>Bi-directional sync</li>
+                    <li>Field mapping</li>
+                    <li>Referral tracking</li>
+                </ul>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-number">06</div>
+                <h4>CreativeForge</h4>
+                <p class="agent-role">Ad Creative Generation</p>
+                <p>Generates 10+ video/image ad variations per month. Testimonial clips, offer graphics, before/after content. Fresh creative keeps your ads performing.</p>
+                <ul>
+                    <li>Video generation</li>
+                    <li>Image creation</li>
+                    <li>A/B variants</li>
+                    <li>Offer graphics</li>
+                </ul>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-number">07</div>
+                <h4>MetaBuyer</h4>
+                <p class="agent-role">Campaign Monitoring + Recommendations</p>
+                <p>24/7 campaign monitoring. Flags underperforming ads, recommends budget reallocation, suggests pauses and launches. All actions require your approval.</p>
+                <ul>
+                    <li>Performance monitoring</li>
+                    <li>Budget recommendations</li>
+                    <li>Underperformer alerts</li>
+                    <li>Optimization suggestions</li>
+                </ul>
+                <div class="human-oversight">
+                    <strong>Human Oversight:</strong> AI suggests changes — you approve before execution. No autonomous ad spend decisions.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <p class="section-number">04 — IMPLEMENTATION ROADMAP</p>
+        <h2>From chaos to automated in 12 weeks.</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <p class="timeline-period">Week 1</p>
+                <h4>Foundation</h4>
+                <p>Chrix configures ChiroHD ↔ GHL native connector. PipelineNinja tags all existing leads. Data cleanup and deduplication begins.</p>
+                <div class="timeline-outcome">✓ Systems connected. Pipeline audited. Hot leads identified.</div>
+            </div>
+
+            <div class="timeline-item">
+                <p class="timeline-period">Week 2</p>
+                <h4>Automation Launch</h4>
+                <p>Deploy FollowUpBot and AppointmentCloser. Configure SMS/email sequences. Train staff on new workflow and dashboard.</p>
+                <div class="timeline-outcome">✓ Automated follow-ups active. Zero leads sit untouched >24h.</div>
+            </div>
+
+            <div class="timeline-item">
+                <p class="timeline-period">Week 3</p>
+                <h4>Reactivation + Ad Takeover</h4>
+                <p>Launch WinBack campaigns. Meta Business Manager access configured. Fire your current ad management company.</p>
+                <div class="timeline-outcome">✓ $1,500/mo savings begin. Dormant patients getting contacted.</div>
+            </div>
+
+            <div class="timeline-item">
+                <p class="timeline-period">Week 4</p>
+                <h4>AI Ad Management</h4>
+                <p>Deploy CreativeForge and MetaBuyer. Generate first batch of new ad creative. Begin campaign optimization.</p>
+                <div class="timeline-outcome">✓ Fresh creative live. AI monitoring active. Human approval workflow in place.</div>
+            </div>
+
+            <div class="timeline-item">
+                <p class="timeline-period">Week 5-8</p>
+                <h4>Optimization Phase</h4>
+                <p>A/B test creative variants. Refine nurture sequences based on response rates. Tune lead scoring thresholds. Scale winning ads.</p>
+                <div class="timeline-outcome">✓ System learning and improving. Performance data flowing.</div>
+            </div>
+
+            <div class="timeline-item">
+                <p class="timeline-period">Week 9-12</p>
+                <h4>Full Operation</h4>
+                <p>Monthly performance reviews. System running autonomously with human oversight. Scale winning strategies, kill underperformers.</p>
+                <div class="timeline-outcome">✓ Full pipeline operational. Break-even achieved. Growth mode active.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investment">
+        <p class="section-number">05 — INVESTMENT</p>
+        <h2>Pay $530/month. Save $2,000+/month.</h2>
+
+        <h3>One-Time Setup</h3>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div>
+                    <h4>Chrix Configuration + Training</h4>
+                    <p>ChiroHD ↔ GHL integration, Meta account setup, workflow mapping, staff training</p>
+                </div>
+                <div class="pricing-amount">
+                    <span class="amount">$3,000</span>
+                    <span class="period">one-time</span>
+                </div>
+            </div>
+        </div>
+
+        <h3>Monthly Recurring</h3>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div>
+                    <h4>AGE Platform (7 Agents)</h4>
+                    <p>Full agent suite running 24/7 with ongoing support and updates</p>
+                </div>
+                <div class="pricing-amount">
+                    <span class="amount">$500</span>
+                    <span class="period">per month</span>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div>
+                    <h4>ChiroHD GHL Integration</h4>
+                    <p>Native connector add-on (billed by ChiroHD)</p>
+                </div>
+                <div class="pricing-amount">
+                    <span class="amount">$30</span>
+                    <span class="period">per month</span>
+                </div>
+            </div>
+        </div>
+
+        <h3>Immediate Savings</h3>
+        <div class="pricing-grid">
+            <div class="pricing-card savings">
+                <div>
+                    <h4>Eliminate Ad Management Company</h4>
+                    <p>AI agents replace manual ad management</p>
+                </div>
+                <div class="pricing-amount">
+                    <span class="amount green">-$1,500</span>
+                    <span class="period">per month</span>
+                </div>
+            </div>
+
+            <div class="pricing-card savings">
+                <div>
+                    <h4>Software Consolidation</h4>
+                    <p>Redundant tools and overlapping subscriptions</p>
+                </div>
+                <div class="pricing-amount">
+                    <span class="amount green">-$500</span>
+                    <span class="period">per month</span>
+                </div>
+            </div>
+        </div>
+
+        <h3>ROI Projection</h3>
+        <table class="roi-table">
+            <tr>
+                <th>Benefit</th>
+                <th>Conservative</th>
+                <th>Realistic</th>
+            </tr>
+            <tr>
+                <td>Eliminate ad management</td>
+                <td>$1,500/mo</td>
+                <td>$1,500/mo</td>
+            </tr>
+            <tr>
+                <td>Software consolidation</td>
+                <td>$500/mo</td>
+                <td>$500/mo</td>
+            </tr>
+            <tr>
+                <td>Recovered pipeline revenue</td>
+                <td>$600/mo</td>
+                <td>$1,200/mo</td>
+            </tr>
+            <tr>
+                <td>Improved ad performance</td>
+                <td>—</td>
+                <td>$300/mo</td>
+            </tr>
+            <tr class="total">
+                <td>Net Monthly Benefit</td>
+                <td>$2,070/mo</td>
+                <td>$2,970/mo</td>
+            </tr>
+        </table>
+
+        <div class="highlight-box">
+            <p class="big-number">Month 2</p>
+            <p>Break-even point — including $3,000 setup fee</p>
+        </div>
+
+        <div class="guarantee-box">
+            <h4>⚡ Performance Guarantee</h4>
+            <p>If Month 2 net benefit (savings + recovered revenue) is less than $2,000, you may terminate with a <strong>full refund of the setup fee</strong>.</p>
+            <p style="margin-bottom: 0;">We're confident because the math is simple: eliminating the $1,500 ad management fee alone nearly covers the monthly cost. Everything else is upside.</p>
+        </div>
+
+        <div class="not-included">
+            <h4>What's NOT Included (Future Phases)</h4>
+            <ul>
+                <li>Website/content work</li>
+                <li>Fortis/payment integration</li>
+                <li>ChiroHD software support (that's ChiroHD's job)</li>
+                <li>Additional agent development beyond the 7 specified</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="needs">
+        <p class="section-number">06 — WHAT WE NEED</p>
+        <h2>To hit the ground running.</h2>
+
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checklist-icon">🔑</div>
+                <div>
+                    <h4>GHL Admin Credentials</h4>
+                    <p>Full admin access to your Go High Level account for pipeline audit and automation setup.</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="checklist-icon">🏥</div>
+                <div>
+                    <h4>ChiroHD Credentials</h4>
+                    <p>Admin access to enable the native GHL integration and configure field mapping.</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="checklist-icon">📱</div>
+                <div>
+                    <h4>Meta Business Manager Access</h4>
+                    <p>Partner access to your Meta ad accounts for CreativeForge and MetaBuyer deployment.</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="checklist-icon">📋</div>
+                <div>
+                    <h4>Current Patient List Export</h4>
+                    <p>ChiroHD export of patient records for WinBack campaign targeting (dormant patient identification).</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="checklist-icon">📞</div>
+                <div>
+                    <h4>Kickoff Call</h4>
+                    <p>60-minute call with Chrix to map workflows, review current state, and align on launch timeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="terms">
+        <p class="section-number">07 — TERMS & COMMITMENTS</p>
+        <h2>What we stand behind.</h2>
+
+        <div class="commitment">
+            <div class="commitment-check">✓</div>
+            <div>
+                <h4>90-Day Initial Term</h4>
+                <p>After the initial 90 days, this agreement becomes month-to-month. Either party can cancel with 30 days notice.</p>
+            </div>
+        </div>
+
+        <div class="commitment">
+            <div class="commitment-check">✓</div>
+            <div>
+                <h4>Direct Discord Access</h4>
+                <p>You don't open a support ticket. You ping us in Discord and we're there. Brad and Chrix take shifts — someone is always reachable during working hours.</p>
+            </div>
+        </div>
+
+        <div class="commitment">
+            <div class="commitment-check">✓</div>
+            <div>
+                <h4>AI Suggests, Human Approves</h4>
+                <p>For Meta ads: the AI recommends changes, generates creative, and flags issues. You approve before any action is taken. No autonomous ad spend decisions.</p>
+            </div>
+        </div>
+
+        <div class="commitment">
+            <div class="commitment-check">✓</div>
+            <div>
+                <h4>Meta Account Ownership</h4>
+                <p>You retain full ownership of all ad accounts. AGE is not responsible for account restrictions imposed by Meta due to policy violations, payment issues, or factors outside our control.</p>
+            </div>
+        </div>
+
+        <div class="commitment">
+            <div class="commitment-check">✓</div>
+            <div>
+                <h4>Performance Guarantee</h4>
+                <p>If Month 2 net benefit is less than $2,000, you may terminate with a full refund of the $3,000 setup fee. We're betting on ourselves.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="font-size: 1.2rem; color: var(--light);">Ready to stop the leak and start growing?</p>
+            <a href="mailto:brad@agegrowth.ai?subject=Adopt%20Chiropractic%20-%20Let's%20Build" class="cta-button">Let's Talk</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Adopt Chiropractic × AGE — Statement of Work</p>
+        <p>Prepared March 13, 2026</p>
+    </footer>
+</body>
+</html>
