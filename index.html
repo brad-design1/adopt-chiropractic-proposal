@@ -197,6 +197,40 @@
             margin-bottom: 0;
         }
 
+        .stack-diagram {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .stack-item {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .stack-item.active {
+            background: rgba(5, 150, 105, 0.2);
+            border: 1px solid var(--primary);
+            color: var(--light);
+        }
+
+        .stack-item.removed {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            text-decoration: line-through;
+        }
+
+        .stack-arrow {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
         .workflow {
             margin: 3rem 0;
         }
@@ -257,6 +291,11 @@
         .tag.opportunity {
             background: rgba(16, 185, 129, 0.2);
             color: var(--success);
+        }
+
+        .tag.simplify {
+            background: rgba(14, 165, 233, 0.2);
+            color: var(--accent);
         }
 
         .agent-grid {
@@ -324,6 +363,20 @@
 
         .human-oversight strong {
             color: var(--warning);
+        }
+
+        .deliverable-card {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .deliverable-card h4 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .timeline {
@@ -396,6 +449,11 @@
             border-color: var(--success);
         }
 
+        .pricing-card.eliminated {
+            background: rgba(239, 68, 68, 0.05);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
         .pricing-card h4 {
             font-size: 1.1rem;
             margin-bottom: 0.3rem;
@@ -418,6 +476,11 @@
 
         .pricing-amount .amount.green {
             color: var(--success);
+        }
+
+        .pricing-amount .amount.red {
+            color: #ef4444;
+            text-decoration: line-through;
         }
 
         .pricing-amount .period {
@@ -611,7 +674,7 @@
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#situation">The Situation</a></li>
-            <li><a href="#problems">The Problems</a></li>
+            <li><a href="#simplify">Simplify</a></li>
             <li><a href="#solution">The Solution</a></li>
             <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#investment">Investment</a></li>
@@ -623,7 +686,7 @@
     <section id="hero">
         <p class="section-number">ADOPT CHIROPRACTIC × AGE</p>
         <h1>Statement of Work</h1>
-        <p class="subtitle">Stop the pipeline leak. Cut costs. Grow smarter.</p>
+        <p class="subtitle">Simplify. Automate. Grow.</p>
         
         <div class="audio-intro">
             <p class="audio-label">🎧 Listen to Brad's intro (75 sec)</p>
@@ -636,169 +699,160 @@
 
     <section id="situation">
         <p class="section-number">01 — THE SITUATION</p>
-        <h2>You're paying $1,500/month for ad management that isn't working.</h2>
+        <h2>You're paying $1,500/month for a tool you don't use.</h2>
         
-        <p class="lead">Your GHL pipeline is full of leads that went cold. Patients who booked once and never came back. Follow-ups that didn't happen. Meanwhile, you're paying a company $1,500/month to "manage" your Meta ads.</p>
+        <p class="lead">Your ad agency bundles Go High Level (GHL) into their $1,500/month retainer. But here's the thing: you already have SKED Pro, which does most of what GHL does — appointment reminders, reactivation campaigns, 2-way texting, new patient portal.</p>
         
-        <p>ChiroHD has your patient records. GHL has your leads. They're not talking to each other. You're manually entering data, missing follow-ups, and watching potential revenue walk out the door.</p>
+        <p>The GHL pipeline? Neglected. Full of cold leads nobody's touching. The ad tracking? Could be a simple dashboard. You're paying for redundancy.</p>
 
-        <p>You don't need to work harder. You need systems that work while you're adjusting patients.</p>
+        <p>Meanwhile, SKED Pro is already integrated with ChiroHD. ChiroHD is already integrated with Fortis. The stack works — you just have one layer too many.</p>
 
         <div class="highlight-box">
-            <p class="big-number">$2,000+</p>
-            <p>Monthly savings when we eliminate the ad management fee and consolidate your software stack</p>
-        </div>
-
-        <div class="quote-block">
-            <p>"What if the AI agents could do the follow-ups, book the appointments, run the ads — and I just approved the messaging?"</p>
+            <p class="big-number">$1,500/mo</p>
+            <p>Going to an ad agency that bundles a tool you already have</p>
         </div>
     </section>
 
-    <section id="problems">
-        <p class="section-number">02 — THE PROBLEMS WE'RE SOLVING</p>
-        <h2>Your pipeline has holes. Let's plug them.</h2>
+    <section id="simplify">
+        <p class="section-number">02 — THE SIMPLIFICATION</p>
+        <h2>Cut the redundant layer. Keep what works.</h2>
+
+        <div class="stack-diagram">
+            <p style="color: var(--gray); margin-bottom: 1rem; font-size: 0.9rem;">CURRENT STACK (redundant)</p>
+            <div class="stack-item removed">Go High Level (GHL) — bundled in $1,500 retainer</div>
+            <div class="stack-arrow">+</div>
+            <div class="stack-item active">SKED Pro — $397/mo (you already pay this)</div>
+            <div class="stack-arrow">↓</div>
+            <div class="stack-item active">ChiroHD — EHR</div>
+            <div class="stack-arrow">↓</div>
+            <div class="stack-item active">Fortis — Payments</div>
+        </div>
+
+        <div class="stack-diagram">
+            <p style="color: var(--success); margin-bottom: 1rem; font-size: 0.9rem;">SIMPLIFIED STACK</p>
+            <div class="stack-item active">Meta Ads → Landing Pages</div>
+            <div class="stack-arrow">↓</div>
+            <div class="stack-item active">SKED Pro — Scheduling + Automation</div>
+            <div class="stack-arrow">↓</div>
+            <div class="stack-item active">ChiroHD — EHR</div>
+            <div class="stack-arrow">↓</div>
+            <div class="stack-item active">Fortis — Payments</div>
+            <div class="stack-arrow">+</div>
+            <div class="stack-item active" style="border-color: var(--accent);">Admin Dashboard — Pipeline + Ad Tracking (we build this)</div>
+        </div>
 
         <div class="workflow">
             <div class="workflow-step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h4>Leads Going Cold <span class="tag leak">revenue leak</span></h4>
-                    <p>GHL is full of leads that never got a second touch. Hot leads become warm, warm becomes cold, cold becomes forgotten. Every untouched lead is money left on the table.</p>
+                    <h4>Fire the ad agency <span class="tag cost">$1,500/mo saved</span></h4>
+                    <p>Take back control of your Meta ads. We'll help you manage them with AI-assisted optimization — you approve all changes.</p>
                 </div>
             </div>
 
             <div class="workflow-step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h4>Manual Follow-Up <span class="tag leak">revenue leak</span></h4>
-                    <p>Someone has to remember to text back, send the reminder, make the call. If it's you, it doesn't happen consistently. If it's staff, it depends on who's working that day.</p>
+                    <h4>Drop GHL entirely <span class="tag simplify">simplification</span></h4>
+                    <p>SKED Pro already handles scheduling, reminders, reactivation, and the new patient portal. GHL is redundant.</p>
                 </div>
             </div>
 
             <div class="workflow-step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h4>Dormant Patients <span class="tag opportunity">opportunity</span></h4>
-                    <p>Patients who came for 6 visits and disappeared. They're not gone — they're just not being reminded. A simple "We miss you" campaign could bring them back.</p>
+                    <h4>Build a custom admin dashboard <span class="tag opportunity">new capability</span></h4>
+                    <p>A simple, clean dashboard for your website that shows lead pipeline, ad performance, and conversion metrics. No more logging into 5 different tools.</p>
                 </div>
             </div>
 
             <div class="workflow-step">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                    <h4>Overpaying for Ad Management <span class="tag cost">$1,500/mo</span></h4>
-                    <p>You're paying a company to manage your Meta ads. Are they A/B testing? Generating new creative? Optimizing spend? Or just... running what's running?</p>
-                </div>
-            </div>
-
-            <div class="workflow-step">
-                <div class="step-number">5</div>
-                <div class="step-content">
-                    <h4>ChiroHD ↔ GHL Disconnect <span class="tag leak">inefficiency</span></h4>
-                    <p>Your EHR and your CRM don't talk. Appointment data lives in one place, lead data in another. Manual sync means manual errors and missed connections.</p>
+                    <h4>Deploy AI agents on SKED <span class="tag opportunity">automation</span></h4>
+                    <p>Agents that enhance what SKED already does — smarter reactivation, lead scoring, ad creative generation.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="solution">
-        <p class="section-number">03 — YOUR AI TEAM</p>
-        <h2>7 agents working 24/7 while you treat patients.</h2>
-        
-        <p>This isn't software you have to learn. It's a team that handles the work you can't get to — follow-ups, scheduling, reactivation, and ad optimization. All with human oversight on the things that matter.</p>
+        <p class="section-number">03 — WHAT WE BUILD</p>
+        <h2>5 agents + 1 dashboard. All working 24/7.</h2>
+
+        <div class="deliverable-card">
+            <h4>🖥️ Custom Admin Dashboard</h4>
+            <p>A clean, private dashboard on your website that shows:</p>
+            <ul style="list-style: none; margin-top: 1rem;">
+                <li style="padding: 0.3rem 0;">• <strong>Lead Pipeline</strong> — Visual status board (new → contacted → booked → patient)</li>
+                <li style="padding: 0.3rem 0;">• <strong>Ad Performance</strong> — Spend, clicks, leads, cost per lead</li>
+                <li style="padding: 0.3rem 0;">• <strong>Conversion Tracking</strong> — UTM parameters from Meta → SKED bookings</li>
+                <li style="padding: 0.3rem 0;">• <strong>Reactivation Stats</strong> — Dormant patients contacted, win-back rate</li>
+            </ul>
+            <p style="margin-top: 1rem; margin-bottom: 0; color: var(--accent);">This replaces everything useful GHL was doing — without the subscription.</p>
+        </div>
 
         <div class="agent-grid">
             <div class="agent-card">
                 <div class="agent-number">01</div>
-                <h4>PipelineNinja</h4>
-                <p class="agent-role">Lead Scoring + Data Hygiene</p>
-                <p>Auto-tags every lead in GHL: 🔥 Hot (contact within 24h), 💰 Warm (48-72h), ❄️ Cold (nurture). Deduplicates contacts, cleans up old data, keeps your pipeline accurate.</p>
+                <h4>LeadScorer</h4>
+                <p class="agent-role">Pipeline Intelligence</p>
+                <p>Monitors new leads from SKED's New Patient Portal. Auto-tags by temperature: 🔥 Hot (booked same day), 💰 Warm (browsed but didn't book), ❄️ Cold (form abandoned). Feeds the dashboard.</p>
                 <ul>
                     <li>Lead scoring</li>
                     <li>Auto-tagging</li>
-                    <li>Deduplication</li>
-                    <li>Data cleanup</li>
+                    <li>Dashboard sync</li>
                 </ul>
             </div>
 
             <div class="agent-card">
                 <div class="agent-number">02</div>
-                <h4>FollowUpBot</h4>
-                <p class="agent-role">SMS/Email Nurture Sequences</p>
-                <p>Three temperature-based nurture tracks running 24/7. Hot leads get contacted within 5 minutes. Warm leads get daily touches. Cold leads get weekly check-ins. No lead sits untouched.</p>
+                <h4>WinBack</h4>
+                <p class="agent-role">Patient Reactivation</p>
+                <p>Works with SKED's existing reactivation feature but smarter — personalizes messaging based on last visit type, time since contact, and patient history from ChiroHD.</p>
                 <ul>
-                    <li>5-minute response</li>
-                    <li>SMS sequences</li>
-                    <li>Email nurture</li>
-                    <li>Temperature-based timing</li>
+                    <li>Smart personalization</li>
+                    <li>SKED integration</li>
+                    <li>ChiroHD data</li>
                 </ul>
             </div>
 
             <div class="agent-card">
                 <div class="agent-number">03</div>
-                <h4>AppointmentCloser</h4>
-                <p class="agent-role">Scheduling Automation</p>
-                <p>2-way calendar sync between GHL and ChiroHD. Automated booking, rescheduling, and reminder sequences. Reduces no-shows and eliminates scheduling friction.</p>
+                <h4>ReviewHunter</h4>
+                <p class="agent-role">Reputation Engine</p>
+                <p>Triggers review requests after positive indicators (completed care plan, rebook, payment processed). Uses SKED's review feature but with smarter timing.</p>
                 <ul>
-                    <li>Calendar sync</li>
-                    <li>Auto-booking</li>
-                    <li>Reminders</li>
-                    <li>Rescheduling</li>
+                    <li>Smart triggers</li>
+                    <li>Google Reviews</li>
+                    <li>Positive filtering</li>
                 </ul>
             </div>
 
             <div class="agent-card">
                 <div class="agent-number">04</div>
-                <h4>WinBack</h4>
-                <p class="agent-role">Reactivation Campaigns</p>
-                <p>Monthly "We miss you" sequences to dormant patients. Personalized based on their last visit, treatment type, and time since last contact. Pure found money from patients who already trust you.</p>
+                <h4>CreativeForge</h4>
+                <p class="agent-role">Ad Creative Generation</p>
+                <p>Generates fresh ad creative monthly — video scripts, image concepts, headline variations. You shoot the videos; we write and iterate.</p>
                 <ul>
-                    <li>Dormant detection</li>
-                    <li>Personalized outreach</li>
-                    <li>Re-engagement</li>
-                    <li>Campaign automation</li>
+                    <li>Video scripts</li>
+                    <li>Ad copy</li>
+                    <li>A/B variants</li>
                 </ul>
             </div>
 
             <div class="agent-card">
                 <div class="agent-number">05</div>
-                <h4>GHLSync</h4>
-                <p class="agent-role">ChiroHD ↔ GHL Integration</p>
-                <p>Native connector enabled and configured. Patient demographics, appointments, and referral sources flow automatically between ChiroHD and GHL. No more manual data entry.</p>
+                <h4>MetaWatch</h4>
+                <p class="agent-role">Ad Performance Monitor</p>
+                <p>Monitors Meta ad performance 24/7. Alerts you when CPL spikes, recommends budget shifts, flags underperformers. All changes require your approval.</p>
                 <ul>
-                    <li>Native integration</li>
-                    <li>Bi-directional sync</li>
-                    <li>Field mapping</li>
-                    <li>Referral tracking</li>
-                </ul>
-            </div>
-
-            <div class="agent-card">
-                <div class="agent-number">06</div>
-                <h4>CreativeForge</h4>
-                <p class="agent-role">Ad Creative Generation</p>
-                <p>Generates 10+ video/image ad variations per month. Testimonial clips, offer graphics, before/after content. Fresh creative keeps your ads performing.</p>
-                <ul>
-                    <li>Video generation</li>
-                    <li>Image creation</li>
-                    <li>A/B variants</li>
-                    <li>Offer graphics</li>
-                </ul>
-            </div>
-
-            <div class="agent-card">
-                <div class="agent-number">07</div>
-                <h4>MetaBuyer</h4>
-                <p class="agent-role">Campaign Monitoring + Recommendations</p>
-                <p>24/7 campaign monitoring. Flags underperforming ads, recommends budget reallocation, suggests pauses and launches. All actions require your approval.</p>
-                <ul>
-                    <li>Performance monitoring</li>
+                    <li>Performance alerts</li>
                     <li>Budget recommendations</li>
-                    <li>Underperformer alerts</li>
-                    <li>Optimization suggestions</li>
+                    <li>Weekly reports</li>
                 </ul>
                 <div class="human-oversight">
-                    <strong>Human Oversight:</strong> AI suggests changes — you approve before execution. No autonomous ad spend decisions.
+                    <strong>Human Oversight:</strong> AI suggests — you approve. No autonomous ad changes.
                 </div>
             </div>
         </div>
@@ -806,77 +860,74 @@
 
     <section id="roadmap">
         <p class="section-number">04 — IMPLEMENTATION ROADMAP</p>
-        <h2>From chaos to automated in 12 weeks.</h2>
+        <h2>Simplified to running in 8 weeks.</h2>
 
         <div class="timeline">
             <div class="timeline-item">
-                <p class="timeline-period">Week 1</p>
-                <h4>Foundation</h4>
-                <p>Chrix configures ChiroHD ↔ GHL native connector. PipelineNinja tags all existing leads. Data cleanup and deduplication begins.</p>
-                <div class="timeline-outcome">✓ Systems connected. Pipeline audited. Hot leads identified.</div>
+                <p class="timeline-period">Week 1-2</p>
+                <h4>Audit + Takeover</h4>
+                <p>Audit current Meta ad account. Take over ad management. Fire the agency (you send the email, we prep the talking points). Configure landing pages.</p>
+                <div class="timeline-outcome">✓ $1,500/mo savings begin. You control your ads.</div>
             </div>
 
             <div class="timeline-item">
-                <p class="timeline-period">Week 2</p>
-                <h4>Automation Launch</h4>
-                <p>Deploy FollowUpBot and AppointmentCloser. Configure SMS/email sequences. Train staff on new workflow and dashboard.</p>
-                <div class="timeline-outcome">✓ Automated follow-ups active. Zero leads sit untouched >24h.</div>
+                <p class="timeline-period">Week 3-4</p>
+                <h4>Dashboard + Agents</h4>
+                <p>Build and deploy the admin dashboard on your website. Connect SKED data feeds. Deploy LeadScorer and WinBack agents.</p>
+                <div class="timeline-outcome">✓ Pipeline visible. Reactivation running.</div>
             </div>
 
             <div class="timeline-item">
-                <p class="timeline-period">Week 3</p>
-                <h4>Reactivation + Ad Takeover</h4>
-                <p>Launch WinBack campaigns. Meta Business Manager access configured. Fire your current ad management company.</p>
-                <div class="timeline-outcome">✓ $1,500/mo savings begin. Dormant patients getting contacted.</div>
+                <p class="timeline-period">Week 5-6</p>
+                <h4>Creative + Reviews</h4>
+                <p>Deploy CreativeForge and ReviewHunter. Generate first batch of new ad creative. Launch smart review request triggers.</p>
+                <div class="timeline-outcome">✓ Fresh ads live. Reviews flowing.</div>
             </div>
 
             <div class="timeline-item">
-                <p class="timeline-period">Week 4</p>
-                <h4>AI Ad Management</h4>
-                <p>Deploy CreativeForge and MetaBuyer. Generate first batch of new ad creative. Begin campaign optimization.</p>
-                <div class="timeline-outcome">✓ Fresh creative live. AI monitoring active. Human approval workflow in place.</div>
-            </div>
-
-            <div class="timeline-item">
-                <p class="timeline-period">Week 5-8</p>
-                <h4>Optimization Phase</h4>
-                <p>A/B test creative variants. Refine nurture sequences based on response rates. Tune lead scoring thresholds. Scale winning ads.</p>
-                <div class="timeline-outcome">✓ System learning and improving. Performance data flowing.</div>
-            </div>
-
-            <div class="timeline-item">
-                <p class="timeline-period">Week 9-12</p>
-                <h4>Full Operation</h4>
-                <p>Monthly performance reviews. System running autonomously with human oversight. Scale winning strategies, kill underperformers.</p>
-                <div class="timeline-outcome">✓ Full pipeline operational. Break-even achieved. Growth mode active.</div>
+                <p class="timeline-period">Week 7-8</p>
+                <h4>Optimization</h4>
+                <p>Deploy MetaWatch. Full system running. A/B test creative. Tune reactivation messaging. First monthly review.</p>
+                <div class="timeline-outcome">✓ Full automation active. Data-driven decisions.</div>
             </div>
         </div>
     </section>
 
     <section id="investment">
         <p class="section-number">05 — INVESTMENT</p>
-        <h2>Pay $530/month. Save $2,000+/month.</h2>
+        <h2>Pay $500/month. Save $1,500/month.</h2>
 
-        <h3>One-Time Setup</h3>
+        <h3>What You're Currently Paying</h3>
         <div class="pricing-grid">
-            <div class="pricing-card">
+            <div class="pricing-card eliminated">
                 <div>
-                    <h4>Chrix Configuration + Training</h4>
-                    <p>ChiroHD ↔ GHL integration, Meta account setup, workflow mapping, staff training</p>
+                    <h4>Ad Agency Retainer (includes GHL)</h4>
+                    <p>Bundled ad management + Go High Level</p>
                 </div>
                 <div class="pricing-amount">
-                    <span class="amount">$3,000</span>
-                    <span class="period">one-time</span>
+                    <span class="amount red">$1,500</span>
+                    <span class="period">eliminated</span>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div>
+                    <h4>SKED Pro</h4>
+                    <p>You already pay this — keep it</p>
+                </div>
+                <div class="pricing-amount">
+                    <span class="amount">$397</span>
+                    <span class="period">per month (no change)</span>
                 </div>
             </div>
         </div>
 
-        <h3>Monthly Recurring</h3>
+        <h3>New Costs</h3>
         <div class="pricing-grid">
             <div class="pricing-card">
                 <div>
-                    <h4>AGE Platform (7 Agents)</h4>
-                    <p>Full agent suite running 24/7 with ongoing support and updates</p>
+                    <h4>AGE Platform (5 Agents + Dashboard)</h4>
+                    <p>All agents running 24/7 with ongoing support and updates</p>
                 </div>
                 <div class="pricing-amount">
                     <span class="amount">$500</span>
@@ -886,131 +937,130 @@
 
             <div class="pricing-card">
                 <div>
-                    <h4>ChiroHD GHL Integration</h4>
-                    <p>Native connector add-on (billed by ChiroHD)</p>
+                    <h4>Setup + Dashboard Build</h4>
+                    <p>Ad takeover, dashboard development, agent configuration</p>
                 </div>
                 <div class="pricing-amount">
-                    <span class="amount">$30</span>
-                    <span class="period">per month</span>
+                    <span class="amount">$3,000</span>
+                    <span class="period">one-time</span>
                 </div>
             </div>
         </div>
 
-        <h3>Immediate Savings</h3>
-        <div class="pricing-grid">
-            <div class="pricing-card savings">
-                <div>
-                    <h4>Eliminate Ad Management Company</h4>
-                    <p>AI agents replace manual ad management</p>
-                </div>
-                <div class="pricing-amount">
-                    <span class="amount green">-$1,500</span>
-                    <span class="period">per month</span>
-                </div>
-            </div>
-
-            <div class="pricing-card savings">
-                <div>
-                    <h4>Software Consolidation</h4>
-                    <p>Redundant tools and overlapping subscriptions</p>
-                </div>
-                <div class="pricing-amount">
-                    <span class="amount green">-$500</span>
-                    <span class="period">per month</span>
-                </div>
-            </div>
-        </div>
-
-        <h3>ROI Projection</h3>
+        <h3>Net Result</h3>
         <table class="roi-table">
             <tr>
-                <th>Benefit</th>
-                <th>Conservative</th>
-                <th>Realistic</th>
+                <th>Line Item</th>
+                <th>Before</th>
+                <th>After</th>
             </tr>
             <tr>
-                <td>Eliminate ad management</td>
+                <td>Ad Agency + GHL</td>
                 <td>$1,500/mo</td>
-                <td>$1,500/mo</td>
+                <td>$0/mo</td>
             </tr>
             <tr>
-                <td>Software consolidation</td>
-                <td>$500/mo</td>
-                <td>$500/mo</td>
+                <td>SKED Pro</td>
+                <td>$397/mo</td>
+                <td>$397/mo</td>
             </tr>
             <tr>
-                <td>Recovered pipeline revenue</td>
-                <td>$600/mo</td>
-                <td>$1,200/mo</td>
-            </tr>
-            <tr>
-                <td>Improved ad performance</td>
+                <td>AGE Platform</td>
                 <td>—</td>
-                <td>$300/mo</td>
+                <td>$500/mo</td>
             </tr>
             <tr class="total">
-                <td>Net Monthly Benefit</td>
-                <td>$2,070/mo</td>
-                <td>$2,970/mo</td>
+                <td>Monthly Total</td>
+                <td>$1,897/mo</td>
+                <td>$897/mo</td>
             </tr>
         </table>
 
         <div class="highlight-box">
-            <p class="big-number">Month 2</p>
-            <p>Break-even point — including $3,000 setup fee</p>
+            <p class="big-number">$1,000/mo</p>
+            <p>Net monthly savings = <strong>$12,000/year</strong> — before counting recovered revenue</p>
         </div>
+
+        <h3>Plus: Revenue Upside</h3>
+        <table class="roi-table">
+            <tr>
+                <th>Source</th>
+                <th>Conservative</th>
+                <th>Realistic</th>
+            </tr>
+            <tr>
+                <td>Reactivated patients (WinBack)</td>
+                <td>$400/mo</td>
+                <td>$800/mo</td>
+            </tr>
+            <tr>
+                <td>Better ad performance (lower CPL)</td>
+                <td>$200/mo</td>
+                <td>$400/mo</td>
+            </tr>
+            <tr>
+                <td>Review-driven new patients</td>
+                <td>$200/mo</td>
+                <td>$400/mo</td>
+            </tr>
+            <tr class="total">
+                <td>Additional Monthly Revenue</td>
+                <td>$800/mo</td>
+                <td>$1,600/mo</td>
+            </tr>
+        </table>
 
         <div class="guarantee-box">
             <h4>⚡ Performance Guarantee</h4>
-            <p>If Month 2 net benefit (savings + recovered revenue) is less than $2,000, you may terminate with a <strong>full refund of the setup fee</strong>.</p>
-            <p style="margin-bottom: 0;">We're confident because the math is simple: eliminating the $1,500 ad management fee alone nearly covers the monthly cost. Everything else is upside.</p>
+            <p>If by Month 2 your net monthly cost isn't at least $500 lower than today (savings minus AGE subscription), you may terminate with a <strong>full refund of the setup fee</strong>.</p>
+            <p style="margin-bottom: 0;">The math is simple: firing the agency saves $1,500. AGE costs $500. That's $1,000 in your pocket before we even talk about revenue.</p>
         </div>
 
         <div class="not-included">
             <h4>What's NOT Included (Future Phases)</h4>
             <ul>
-                <li>Website/content work</li>
-                <li>Fortis/payment integration</li>
-                <li>ChiroHD software support (that's ChiroHD's job)</li>
-                <li>Additional agent development beyond the 7 specified</li>
+                <li>Full website redesign</li>
+                <li>Fortis/payment automation</li>
+                <li>Additional landing pages beyond initial 2</li>
+                <li>Video production (we write scripts, you shoot)</li>
             </ul>
         </div>
     </section>
 
     <section id="needs">
         <p class="section-number">06 — WHAT WE NEED</p>
-        <h2>To hit the ground running.</h2>
+        <h2>To get started.</h2>
 
         <div class="checklist">
             <div class="checklist-item">
-                <div class="checklist-icon">🔑</div>
+                <div class="checklist-icon">📱</div>
                 <div>
-                    <h4>GHL Admin Credentials</h4>
-                    <p>Full admin access to your Go High Level account for pipeline audit and automation setup.</p>
+                    <h4>Meta Business Manager Access</h4>
+                    <p>Partner access to your Meta ad account for takeover and ongoing management.</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="checklist-icon">📅</div>
+                <div>
+                    <h4>SKED Pro Admin Access</h4>
+                    <p>API access or admin login for dashboard integration and agent deployment.</p>
                 </div>
             </div>
 
             <div class="checklist-item">
                 <div class="checklist-icon">🏥</div>
                 <div>
-                    <h4>ChiroHD Credentials</h4>
-                    <p>Admin access to enable the native GHL integration and configure field mapping.</p>
+                    <h4>ChiroHD Read Access</h4>
+                    <p>For WinBack personalization — patient visit history, last contact dates.</p>
                 </div>
             </div>
 
             <div class="checklist-item">
-                <div class="checklist-icon">📱</div>
+                <div class="checklist-icon">🌐</div>
                 <div>
-                    <h4>Meta Business Manager Access</h4>
-                    <p>Partner access to your Meta ad accounts for CreativeForge and MetaBuyer deployment.</p>
-                </div>
-            </div>
-
-            <div class="checklist-item">
-                <div class="checklist-icon">📋</div>
-                <div>
-                    <h4>Current Patient List Export</h4>
-                    <p>ChiroHD export of patient records for WinBack campaign targeting (dormant patient identification).</p>
+                    <h4>Website Access</h4>
+                    <p>To deploy the admin dashboard and landing pages. (Or we can host separately.)</p>
                 </div>
             </div>
 
@@ -1018,7 +1068,7 @@
                 <div class="checklist-icon">📞</div>
                 <div>
                     <h4>Kickoff Call</h4>
-                    <p>60-minute call with Chrix to map workflows, review current state, and align on launch timeline.</p>
+                    <p>60 minutes to map current workflows, audit ad account, plan the agency breakup.</p>
                 </div>
             </div>
         </div>
@@ -1032,7 +1082,7 @@
             <div class="commitment-check">✓</div>
             <div>
                 <h4>90-Day Initial Term</h4>
-                <p>After the initial 90 days, this agreement becomes month-to-month. Either party can cancel with 30 days notice.</p>
+                <p>After 90 days, this agreement becomes month-to-month. Either party can cancel with 30 days notice.</p>
             </div>
         </div>
 
@@ -1040,7 +1090,7 @@
             <div class="commitment-check">✓</div>
             <div>
                 <h4>Direct Discord Access</h4>
-                <p>You don't open a support ticket. You ping us in Discord and we're there. Brad and Chrix take shifts — someone is always reachable during working hours.</p>
+                <p>You ping us, we respond. Brad and Chrix take shifts — someone is always reachable during working hours.</p>
             </div>
         </div>
 
@@ -1048,28 +1098,28 @@
             <div class="commitment-check">✓</div>
             <div>
                 <h4>AI Suggests, Human Approves</h4>
-                <p>For Meta ads: the AI recommends changes, generates creative, and flags issues. You approve before any action is taken. No autonomous ad spend decisions.</p>
+                <p>For Meta ads: the AI recommends changes. You approve before anything runs. No autonomous ad spend decisions.</p>
             </div>
         </div>
 
         <div class="commitment">
             <div class="commitment-check">✓</div>
             <div>
-                <h4>Meta Account Ownership</h4>
+                <h4>You Own Everything</h4>
+                <p>The dashboard code, the ad account, the SKED data — it's all yours. If you leave, you keep everything we built.</p>
+            </div>
+        </div>
+
+        <div class="commitment">
+            <div class="commitment-check">✓</div>
+            <div>
+                <h4>Meta Account Disclaimer</h4>
                 <p>You retain full ownership of all ad accounts. AGE is not responsible for account restrictions imposed by Meta due to policy violations, payment issues, or factors outside our control.</p>
             </div>
         </div>
 
-        <div class="commitment">
-            <div class="commitment-check">✓</div>
-            <div>
-                <h4>Performance Guarantee</h4>
-                <p>If Month 2 net benefit is less than $2,000, you may terminate with a full refund of the $3,000 setup fee. We're betting on ourselves.</p>
-            </div>
-        </div>
-
         <div style="text-align: center; margin-top: 3rem;">
-            <p style="font-size: 1.2rem; color: var(--light);">Ready to stop the leak and start growing?</p>
+            <p style="font-size: 1.2rem; color: var(--light);">Ready to simplify and save $1,000/month?</p>
             <a href="mailto:brad@agegrowth.ai?subject=Adopt%20Chiropractic%20-%20Let's%20Build" class="cta-button">Let's Talk</a>
         </div>
     </section>

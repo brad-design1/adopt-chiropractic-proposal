@@ -1,4 +1,4 @@
-# Audio Intro Script — Adopt Chiropractic SOW
+# Audio Intro Script — Adopt Chiropractic SOW (v2 - Simplified Stack)
 
 **Duration:** ~75 seconds  
 **Voice:** Brad Raschke (ElevenLabs custom voice)  
@@ -8,20 +8,14 @@
 
 Hey man, it's Brad.
 
-I wanted to walk you through what you're looking at here — and why I think it's worth your time.
+I looked at your tech stack, and here's what I found: you're paying fifteen hundred a month to that ad agency, and part of that is for Go High Level. But you already have SKED Pro. SKED does the same thing — scheduling, reminders, reactivation, the patient portal. You're paying for the same software twice.
 
-You told me you're paying fifteen hundred a month for ad management. And your GHL pipeline is full of leads that went cold. That's not a marketing problem — that's a follow-up problem. And it's fixable.
+So here's what I'm proposing: fire the agency, drop GHL entirely, and let me build you something cleaner.
 
-What you're about to read is a Statement of Work. Not a pitch deck. Not a sales page. It's a clear breakdown of what we'd build, how long it takes, and what it costs.
+We'll take over your Meta ads — I'll help you manage them with AI tools, but you stay in control. We'll build a simple dashboard on your website that shows your pipeline and ad performance. And we'll deploy five AI agents that work with SKED to automate the things your team doesn't have time for.
 
-Here's the short version:
+The math is simple. You're paying nineteen hundred a month right now for SKED plus the agency. With this, you'd pay nine hundred. That's a thousand bucks a month back in your pocket — before we even talk about bringing back dormant patients or improving your ads.
 
-Seven AI agents. They handle follow-ups, appointment booking, reactivation campaigns, and ad optimization — while you treat patients. You stay in control. The AI suggests, you approve.
+If by month two you're not saving at least five hundred a month? Full refund on the setup fee.
 
-We fire your ad management company. That's fifteen hundred back in your pocket every month. We connect ChiroHD and GHL so they actually talk to each other. And we set up systems that work when you're not watching.
-
-Total cost? Three thousand to set it up. Five thirty a month after that. And if by month two you're not saving at least two thousand a month? Full refund on the setup fee.
-
-That's the deal.
-
-Scroll through, read it, and call me when you're ready to talk.
+That's the deal. Scroll through, read it, and call me when you're ready.
