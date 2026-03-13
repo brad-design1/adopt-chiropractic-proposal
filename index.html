@@ -141,6 +141,27 @@
             margin-top: 1rem;
         }
 
+        .audio-intro {
+            margin-top: 2.5rem;
+            padding: 1.5rem 2rem;
+            background: rgba(5, 150, 105, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .audio-label {
+            font-size: 0.95rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+        }
+
+        .audio-intro audio {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
         .highlight-box {
             background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(14, 165, 233, 0.15) 100%);
             border: 2px solid var(--primary);
@@ -603,6 +624,14 @@
         <p class="section-number">ADOPT CHIROPRACTIC × AGE</p>
         <h1>Statement of Work</h1>
         <p class="subtitle">Stop the pipeline leak. Cut costs. Grow smarter.</p>
+        
+        <div class="audio-intro">
+            <p class="audio-label">🎧 Listen to Brad's intro (75 sec)</p>
+            <audio controls>
+                <source src="intro-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </section>
 
     <section id="situation">
